@@ -1,0 +1,14 @@
+:root {
+  --theme-bak: white;
+  --theme-color: #2c3e50;
+}
+
+.dark {
+  --theme-bck: rgb(17, 24, 39);
+  --theme-color: white;
+}
+body {
+  background-color: var(--theme-bck);
+  color: var(--theme-color);
+  transition: all 0.3s;
+}
