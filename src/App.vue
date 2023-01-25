@@ -1,16 +1,19 @@
 <template>
-  <div class="dark" ref="content">
+  <div ref="content" class="dark">
     <img alt="Vue logo" src="./assets/logo.png" />
+    <h2>{{ route.name }}</h2>
     <router-view />
     <mdd-tools />
   </div>
 </template>
 
 <script setup>
-import mddTools from '@/components/mddTools.vue'
 import { ref } from 'vue'
+import { useRoute } from 'vue-router'
 
+import mddTools from '@/components/mddTools.vue'
 import { useTheme } from '@/store/store.js'
+const route = useRoute()
 
 const content = ref(null)
 

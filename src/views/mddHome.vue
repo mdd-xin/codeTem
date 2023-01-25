@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h2>{{ route.name }}</h2>
     <el-form :inline="true" :model="formInline" class="demo-form-inline">
       <el-form-item label="userName">
         <el-input v-model="formInline.user" placeholder="Approved by" />
@@ -13,9 +12,8 @@
 </template>
 
 <script setup>
-import { useRoute, useRouter } from 'vue-router'
+import { useRouter } from 'vue-router'
 import { reactive } from 'vue'
-const route = useRoute()
 const router = useRouter()
 
 const formInline = reactive({
